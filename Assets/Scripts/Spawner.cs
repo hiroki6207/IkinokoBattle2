@@ -10,7 +10,7 @@ public class Spawner : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        StartCoroutine(Spawner()); //Coroutineを開始
+        StartCoroutine(SpawnLoop()); //Coroutineを開始
     }
 
     /// <summary>
