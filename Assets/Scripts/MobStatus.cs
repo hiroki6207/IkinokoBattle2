@@ -36,6 +36,9 @@ public class MobStatus : MonoBehaviour
     {
         _life = lifeMax; //初期状態はライフ満タン
         _animator = GetComponentInChildren<Animator>();
+
+        //ライフゲージの表示開始
+        LifeGaugeContainer.Instance.Add(this);
     }
 
     // Update is called once per frame
@@ -47,7 +50,8 @@ public class MobStatus : MonoBehaviour
     //キャラクターが倒れた時の処理を記述します
     protected virtual void OnDie()
     {
-
+        //ライフゲージの表示終了
+        LifeGaugeContainer.Instance.Remove(this);
     }
 
     //指定値のダメージを受けます
