@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("MoveSpeed", new Vector3(_moveVelocity.x, 0, _moveVelocity.z).magnitude);
 
         //Debug.Log(_characterController.isGrounded ? "地上にいます" : "空中です");
-        Debug.Log(IsGrounded ? "地上にいます" : "空中です");
+        //Debug.Log(IsGrounded ? "地上にいます" : "空中です");
 
         if(CrossPlatformInputManager.GetButtonDown("Fire1"))
         {

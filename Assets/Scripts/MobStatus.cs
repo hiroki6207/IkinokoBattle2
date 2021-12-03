@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Mob（動くオブジェクト、MovingObjectの略）の状態管理スクリプト
-public class MobStatus : MonoBehaviour
+public abstract class MobStatus : MonoBehaviour
 {
 
     //状態の定義
@@ -63,6 +63,7 @@ public class MobStatus : MonoBehaviour
         _life -= damage;
         if (_life > 0) return;
 
+        Debug.Log("ライフが0になったため、死亡しました");
         _state = StateEnum.Die;
         _animator.SetTrigger("Die");
 

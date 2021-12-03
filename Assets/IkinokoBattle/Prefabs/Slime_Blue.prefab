@@ -133,6 +133,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onTriggerEnter:
     m_PersistentCalls:
+      m_Calls: []
+  onTriggerStay:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8523456099047481372}
         m_MethodName: OnAttackRangeEnter
@@ -145,9 +148,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onTriggerStay:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &8523456100263157738
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,6 +441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 0.5
   attackCollider: {fileID: 8523456100263157733}
+  swingSound: {fileID: 0}
 --- !u!114 &8523456099047481375
 MonoBehaviour:
   m_ObjectHideFlags: 0
